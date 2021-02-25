@@ -28,9 +28,12 @@
     "@nestjs/swagger": "^4.7.15",
     "@nestjs/typeorm": "^7.1.5",
     "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
+    "sequelize": "^6.5.0",
+    "sequelize-typescript": "^2.1.0",
     "swagger-ui-express": "^4.1.6",
     "typeorm": "^0.2.31"
   },
