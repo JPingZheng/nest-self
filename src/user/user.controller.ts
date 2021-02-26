@@ -1,5 +1,4 @@
-import { Body, Controller, Get, Post, UseInterceptors } from '@nestjs/common';
-import { TransformInterceptor } from 'src/interfaces/transform/transform.interceptor';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ValidationPipe } from 'src/validate/validation.pipe';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UserService } from './user.service';

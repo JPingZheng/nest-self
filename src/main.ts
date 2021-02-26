@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { TransformInterceptor } from './interfaces/transform/transform.interceptor';
+import { AuthGuard } from './guard/auth';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -17,6 +18,9 @@ async function bootstrap() {
 
   // 全局拦截器
   app.useGlobalInterceptors(new TransformInterceptor());
+
+  // 全局守卫
+  app.useGlobalGuards(new AuthGuard());
   await app.listen(1000);
 }
 bootstrap();
